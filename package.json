@@ -1,0 +1,49 @@
+{
+  "name": "exegesis-koa",
+  "version": "0.0.1",
+  "description": "Koa middleware to handle OpenAPI 3.x.",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && nyc --reporter=html --reporter=text mocha test/**/*.test.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "keywords": [
+    "koa",
+    "OpenAPI",
+    "oas3",
+    "exegesis"
+  ],
+  "author": {
+    "name": "James Mortemore",
+    "email": "jamesmortemore@gmail.com",
+    "url": "https://github.com/confuser"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:confuser/exegesis-koa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/confuser/exegesis-koa/issues"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.1",
+    "koa": "^2.5.1",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.1",
+    "standard": "^11.0.1",
+    "supertest": "^3.1.0"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it",
+      "before",
+      "beforeEach",
+      "afterEach"
+    ]
+  },
+  "dependencies": {
+    "exegesis": "^1.0.1"
+  }
+}
