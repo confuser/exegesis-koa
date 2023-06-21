@@ -44,6 +44,6 @@
     ]
   },
   "dependencies": {
-    "exegesis": "^1.0.1"
+    "exegesis": "^2.2.3"
   }
 }
