@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "standard && nyc --reporter=html --reporter=text mocha test/**/*.test.js",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "keywords": [
     "koa",
@@ -29,10 +31,10 @@
   "devDependencies": {
     "coveralls": "^3.0.1",
     "koa": "^2.5.1",
-    "mocha": "^5.2.0",
-    "nyc": "^12.0.1",
-    "standard": "^11.0.1",
-    "supertest": "^3.1.0"
+    "mocha": "^10.1.0",
+    "nyc": "^15.0.0",
+    "standard": "^16.0.0",
+    "supertest": "^6.2.0"
   },
   "standard": {
     "globals": [
@@ -44,6 +46,8 @@
     ]
   },
   "dependencies": {
-    "exegesis": "^1.0.1"
-  }
+    "exegesis": "^1.0.1",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
